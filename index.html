@@ -7,11 +7,15 @@
 <link rel="stylesheet" href="./Zero/reset.css">
 </head>
 <SCRIPT language=JavaScript>
-alert("三天的成果")
-alert("暂时不想动这玩意了")
+var welcome = prompt("欢迎来访，告诉我你的名字");
+if(welcome !=null && welcome !="")
+{alert("欢迎你,"+welcome);
+alert("gitub分支：https://mmbbhh.github.io/Zero/")}
+else{alert("不说不让进！");
+window.close();}
 </script>
 <style>
-body{background-image: url(./Zro/sss.gif);
+body{background-image: url(./Zero/asddd.jpg);
   background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center center;
@@ -85,13 +89,42 @@ height: 235px;}
     50%{transform:rotate(180deg);}
     100%{transform:rotate(360deg);}}
 
- #s{width: 960px;
+ #tup0{width: 960px;
  height: 260px;
  margin: 0 auto;
- background:url(./Zero/pixiv1.jpg)no-repeat;
+ background-image: url(./Zero/001.jpg);
  margin-top: 20px;
  border: 2px solid black;	
 }  
+
+        input.arrow1{                	     
+            width: 40px; height: 60px;             
+            position: absolute;
+            margin-top: 100px;
+            display: none;        
+    }
+        
+        input.arrow2{      
+            width: 40px; height: 60px;             
+            position: absolute;
+            margin-top: 100px;
+            display: none;         
+            margin-left: 890px;
+    }
+    
+       input.arrow1:hover{        
+            display: block; 
+    }
+       input.arrow2:hover{           
+            display: block; 
+    }
+    
+      #tup0:hover .arrow1{display: block; 
+      }
+
+      #tup0:hover .arrow2{display: block; 
+      }   
+      
 #ii{background:url(./Zero/55.jpg)no-repeat;
     height:260px; 
     width:32px;
@@ -437,7 +470,7 @@ background: url(./Zero/last.jpg);}
 </style>
  <body>
   <body style="margin:0 auto; border-style:dotted; width:1920px;"> 
-    <EMBED src=./Zero/123.mp3 hidden=true type=audio/mpeg loop="-1">
+    <EMBED height="0" src=./Zero/123.mp3 hidden=true type=audio/mpeg loop="-1">
    <div id="head">
    	<div id="up">
    		<ul id="xx">
@@ -455,14 +488,16 @@ background: url(./Zero/last.jpg);}
    			<li><a class="da" target="_blank" href="http://ff.sdo.com/date/na/pay/index.html">充值购买</a></li>
    			<li><a class="da" target="_blank" href="http://bbs.ff.sdo.com/">官方论坛</a></li>
    			<li><a class="da" target="_blank" href="http://kf.sdo.com/">客户服务</a></li>
-   			<li><a class="da" href="http://ff.sdo.com/web6/honor/honor.asp">获奖荣誉</a</li>
-   			</ul>
+   			<li><a class="da" href="http://ff.sdo.com/web6/honor/honor.asp">获奖荣誉</a></li>
+   		</ul>
    	</div>
    </div>
     <div id="shenn">
       <img src="./Zero/snow.jpg" class="xb1" /> 
       <img src="./Zero/snow.jpg" class="xb2" /> 
-     <div id="s">
+     <div id="tup0">
+		 <input class="arrow1" type="image" src="./Zero/6668.png" onclick="prve()">
+         <input class="arrow2" type="image" src="./Zero/5558.png" onclick="next()">
       <ul id="ii">
         <li><a class="wa" target="_blank" href="http://act.ff.sdo.com/anniversary/index.html">　　 </a></li>
         <li><a class="sa" target="_blank" href="http://act.ff.sdo.com/project/FFCraftsman/index.html">　　 </a></li>
@@ -570,3 +605,49 @@ background: url(./Zero/last.jpg);}
     <div class="fgx"></div>
     <div class="tlast"></div>
   </div>
+  <script>
+  	var p=0;
+ function next()   
+        {	p++;     
+        	var p1 = document.getElementById("tup0");
+            if(p>=5){p=0}
+            if(p<=0){
+        	p1.style.backgroundImage="url(./Zero/001.jpg)";}
+            else if(p<=1){
+        	p1.style.backgroundImage="url(./Zero/002.jpg)";}
+        	else if(p<=2)
+        	{p1.style.backgroundImage="url(./Zero/003.jpg)";}
+        	else if(p<=3)
+            {p1.style.backgroundImage="url(./Zero/004.jpg)";}
+            else
+            {p1.style.backgroundImage="url(./Zero/005.jpg)";} 
+            
+        }
+ function prve()   
+        { 
+        	p=p-1;
+        	var p2 = document.getElementById("tup0");
+        		if (p<0) {
+        		p=4;
+        	}
+            if(p<=0){
+        	p2.style.backgroundImage="url(./Zero/001.jpg)";}
+            else if(p<=1)
+            {p2.style.backgroundImage="url(./Zero/002.jpg)";}
+        	else if(p<=2)
+        	{p2.style.backgroundImage="url(./Zero/003.jpg)";}
+        	else if(p<=3)
+            {p2.style.backgroundImage="url(./Zero/004.jpg)";}
+            else
+            {p2.style.backgroundImage="url(./Zero/005.jpg)";} 
+        
+        }
+         function funcTest(){
+    window.setInterval("next()",3000);
+
+}
+        window.onload = funcTest;
+
+  </script>
+  </body>
+  </html>
